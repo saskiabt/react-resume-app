@@ -1,7 +1,7 @@
 import React from "react";
 
 function Output() {
-  return <div>This is the Output Div</div>;
+  return <div className="Output">This is the Output Div</div>;
 }
 
 export default Output;
