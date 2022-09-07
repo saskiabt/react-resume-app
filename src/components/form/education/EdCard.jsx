@@ -1,60 +1,59 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import React from "react";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
 
-function EdCard({ deleteCard }) {
-  const initialValues = {
-    degree: "",
-    school: "",
-    startDate: "",
-    endDate: "",
-    description: "",
-  };
-
-  const [values, setValues] = useState(initialValues);
-
+function EdCard({ education, setEducation, setEdCardList, edCardList }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(value);
-    setValues({
-      ...values,
+    setEducation({
+      ...education,
       [name]: value,
     });
+  };
+
+  const deleteCard = (event) => {
+    const { target } = event;
+    const { key } = target;
+    console.log(key);
+    const newList = [...edCardList];
+    newList.splice({ key }, 1);
+    setEdCardList(newList);
   };
 
   return (
     <div>
       <TextInput
-        values={values.degree}
+        values={education.degree}
         handleChange={handleChange}
         type="text"
         placeholder="Degree or Certificate:"
         name="degree"
       />
       <TextInput
-        values={values.school}
+        values={education.school}
         handleChange={handleChange}
         type="text"
         placeholder="School:"
         name="school"
       />
       <TextInput
-        values={values.startDate}
+        values={education.startDate}
         handleChange={handleChange}
         type="date"
         placeholder="Start Date:"
         name="startDate"
       />
       <TextInput
-        values={values.endDate}
+        values={education.endDate}
         handleChange={handleChange}
         type="date"
         placeholder="End Date:"
         name="endDate"
       />
       <TextArea
-        values={values.description}
+        values={education.description}
         handleChange={handleChange}
         type="text"
         placeholder="Description"

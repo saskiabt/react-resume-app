@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 import EdCard from "./EdCard";
 
-function Education() {
-  const deleteCard = (event) => {
-    const { target } = event;
-    const { key } = target;
-    setEdCardList(edCardList.splice({ key }, 1));
-  };
-
-  const [edCardList, setEdCardList] = useState([
-    <EdCard key={0} deleteCard={deleteCard} />,
-  ]);
+function Education({ education, setEducation }) {
+  const [{ edCardList }, setEdCardList] = useState({ edCardList: [] });
 
   const addEdCard = () => {
-    setEdCardList(
-      edCardList.concat(
-        <EdCard key={edCardList.length} deleteCard={deleteCard} />,
-      ),
+    edCardList.push(
+      <EdCard
+        key={edCardList.length}
+        edCardList={edCardList}
+        setEdCardList={setEdCardList}
+        education={education}
+        setEducation={setEducation}
+      />,
     );
+    setEdCardList({ edCardList: [...edCardList] });
   };
 
   return (
