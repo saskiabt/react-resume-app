@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextArea from "./TextArea";
+import TextArea from "../TextArea";
 
 function Skills() {
   const [skills, setSkills] = useState({ text: "" });

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import TextArea from "./TextArea";
-import TextInput from "./TextInput";
+import TextArea from "../../TextArea";
+import TextInput from "../../TextInput";
 
 function WorkCard({ deleteCard }) {
   const initialValues = {

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-import ContactInfo from "./ContactInfo";
-import WorkExperience from "./WorkExperience";
-import "../styles/Form.css";
-import Education from "./Education";
+import ContactInfo from "./contactInfo/ContactInfo";
+import WorkExperience from "./work/WorkExperience";
+import "../../styles/Form.css";
+import Education from "./education/Education";
 // import Skills from "./Skills";
 
 function Form() {
@@ -12,7 +13,6 @@ function Form() {
         <ContactInfo />
         <WorkExperience />
         <Education />
-        {/* <Skills /> */}
       </form>
     </div>
   );
