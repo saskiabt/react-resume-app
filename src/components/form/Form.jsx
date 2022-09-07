@@ -6,13 +6,21 @@ import "../../styles/Form.css";
 import Education from "./education/Education";
 // import Skills from "./Skills";
 
-function Form() {
+function Form({
+  personalDetails,
+  setPersonalDetails,
+  education,
+  setEducation,
+}) {
   return (
     <div className="Form">
       <form id="form">
-        <ContactInfo />
-        <WorkExperience />
-        <Education />
+        <ContactInfo
+          personalDetails={personalDetails}
+          setPersonalDetails={setPersonalDetails}
+        />
+        {/* <WorkExperience /> */}
+        <Education education={education} setEducation={setEducation} />
       </form>
     </div>
   );

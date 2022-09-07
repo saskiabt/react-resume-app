@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
 
-function EdCard({ deleteCard }) {
+function EdCard({ deleteCard, education, setEducation }) {
   const initialValues = {
     degree: "",
     school: "",
@@ -12,13 +12,11 @@ function EdCard({ deleteCard }) {
     description: "",
   };
 
-  const [values, setValues] = useState(initialValues);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(value);
-    setValues({
-      ...values,
+    setEducation({
+      ...education,
       [name]: value,
     });
   };
@@ -26,35 +24,35 @@ function EdCard({ deleteCard }) {
   return (
     <div>
       <TextInput
-        values={values.degree}
+        values={education.degree}
         handleChange={handleChange}
         type="text"
         placeholder="Degree or Certificate:"
         name="degree"
       />
       <TextInput
-        values={values.school}
+        values={education.school}
         handleChange={handleChange}
         type="text"
         placeholder="School:"
         name="school"
       />
       <TextInput
-        values={values.startDate}
+        values={education.startDate}
         handleChange={handleChange}
         type="date"
         placeholder="Start Date:"
         name="startDate"
       />
       <TextInput
-        values={values.endDate}
+        values={education.endDate}
         handleChange={handleChange}
         type="date"
         placeholder="End Date:"
         name="endDate"
       />
       <TextArea
-        values={values.description}
+        values={education.description}
         handleChange={handleChange}
         type="text"
         placeholder="Description"

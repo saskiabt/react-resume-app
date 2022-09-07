@@ -1,35 +1,26 @@
 /* eslint-disable react/prop-types */
-import { React, useState } from "react";
+import { React } from "react";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
 
-function ContactInfo({
-  firstNameRef,
-  lastNameRef,
-  emailRef,
-  cellRef,
-  linkedInRef,
-  websiteRef,
-  bioRef,
-}) {
-  const initialValues = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    cell: "",
-    website: "",
-    linkedIn: "",
-    bio: "",
-    test: "test",
-  };
-
-  const [values, setValues] = useState(initialValues);
+function ContactInfo(props) {
+  const {
+    firstNameRef,
+    lastNameRef,
+    emailRef,
+    cellRef,
+    linkedInRef,
+    websiteRef,
+    bioRef,
+    personalDetails,
+    setPersonalDetails,
+  } = props;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(value);
-    setValues({
-      ...values,
+    setPersonalDetails({
+      ...personalDetails,
       [name]: value,
     });
   };
@@ -39,15 +30,15 @@ function ContactInfo({
       <h2>Personal Info</h2>
       <div className="names">
         <TextInput
-          values={values.firstName}
+          values={personalDetails.firstName}
           handleChange={handleChange}
           type="text"
           placeholder="First Name"
           name="firstName"
-          refe={firstNameRef}
+          ref={firstNameRef}
         />
         <TextInput
-          values={values.lastName}
+          values={personalDetails.lastName}
           handleChange={handleChange}
           type="text"
           placeholder="Last Name:"
@@ -57,7 +48,7 @@ function ContactInfo({
       </div>
       <div className="cell-email">
         <TextInput
-          values={values.email}
+          values={personalDetails.email}
           handleChange={handleChange}
           type="email"
           placeholder="Email Address:"
@@ -65,7 +56,7 @@ function ContactInfo({
           ref={emailRef}
         />
         <TextInput
-          values={values.cell}
+          values={personalDetails.cell}
           handleChange={handleChange}
           type="tel"
           placeholder="Mobile Number:"
@@ -75,7 +66,7 @@ function ContactInfo({
       </div>
       <div className="linkedin-website">
         <TextInput
-          values={values.linkedIn}
+          values={personalDetails.linkedIn}
           handleChange={handleChange}
           type="url"
           placeholder="LinkedIn Profile:"
@@ -83,7 +74,7 @@ function ContactInfo({
           ref={linkedInRef}
         />
         <TextInput
-          values={values.website}
+          values={personalDetails.website}
           handleChange={handleChange}
           type="url"
           placeholder="Website:"
@@ -92,7 +83,7 @@ function ContactInfo({
         />
       </div>
       <TextArea
-        values={values.bio}
+        values={personalDetails.bio}
         handleChange={handleChange}
         placeholder="Enter a short bio"
         ref={bioRef}

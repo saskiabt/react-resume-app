@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EdCard from "./EdCard";
 
-function Education() {
+function Education({ education, setEducation }) {
   const deleteCard = (event) => {
     const { target } = event;
     const { key } = target;
@@ -9,13 +9,23 @@ function Education() {
   };
 
   const [edCardList, setEdCardList] = useState([
-    <EdCard key={0} deleteCard={deleteCard} />,
+    <EdCard
+      key={0}
+      deleteCard={deleteCard}
+      education={education}
+      setEducation={setEducation}
+    />,
   ]);
 
   const addEdCard = () => {
     setEdCardList(
       edCardList.concat(
-        <EdCard key={edCardList.length} deleteCard={deleteCard} />,
+        <EdCard
+          key={edCardList.length}
+          deleteCard={deleteCard}
+          education={education}
+          setEducation={setEducation}
+        />,
       ),
     );
   };
