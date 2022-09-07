@@ -22,6 +22,7 @@ function ContactInfo({
     bio: "",
     test: "test",
   };
+
   const [values, setValues] = useState(initialValues);
 
   const handleChange = (event) => {
