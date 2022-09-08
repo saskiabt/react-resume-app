@@ -13,11 +13,12 @@ function EdCard({ education, setEducation, id, cardList, setCardList }) {
     });
   };
 
-  const deleteCard = () => {
-    const newList = [...cardList];
-    newList.splice(id + 1, 1);
-    console.log(newList);
-    setCardList(newList);
+  const deleteCard = (index) => {
+    setCardList((current) => {
+      current.filter((card) => {
+        return card.id !== index;
+      });
+    });
   };
 
   return (
@@ -58,7 +59,7 @@ function EdCard({ education, setEducation, id, cardList, setCardList }) {
         name="description"
         form="form"
       />
-      <button type="button" className="delete" onClick={deleteCard}>
+      <button type="button" className="delete" onClick={() => deleteCard(id)}>
         Delete
       </button>
     </div>
