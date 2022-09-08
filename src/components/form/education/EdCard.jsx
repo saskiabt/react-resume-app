@@ -3,7 +3,7 @@ import React from "react";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
 
-function EdCard({ education, setEducation, setEdCardList, edCardList }) {
+function EdCard({ education, setEducation, id, cardList, setCardList }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(value);
@@ -13,17 +13,15 @@ function EdCard({ education, setEducation, setEdCardList, edCardList }) {
     });
   };
 
-  const deleteCard = (event) => {
-    const { target } = event;
-    const { key } = target;
-    console.log(key);
-    const newList = [...edCardList];
-    newList.splice({ key }, 1);
-    setEdCardList(newList);
+  const deleteCard = () => {
+    const newList = [...cardList];
+    newList.splice(id + 1, 1);
+    console.log(newList);
+    setCardList(newList);
   };
 
   return (
-    <div>
+    <div className="group">
       <TextInput
         values={education.degree}
         handleChange={handleChange}

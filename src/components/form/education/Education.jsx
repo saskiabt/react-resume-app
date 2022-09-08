@@ -1,32 +1,35 @@
 import React, { useState } from "react";
+import uuid from "react-uuid";
 import EdCard from "./EdCard";
 
 function Education({ education, setEducation }) {
-  const [{ edCardList }, setEdCardList] = useState({ edCardList: [] });
+  const [cardList, setCardList] = useState([]);
 
-  const addEdCard = () => {
-    edCardList.push(
+  const addCard = () => {
+    const key = uuid();
+    const edCard = (
       <EdCard
-        key={edCardList.length}
-        edCardList={edCardList}
-        setEdCardList={setEdCardList}
         education={education}
         setEducation={setEducation}
-      />,
+        key={key}
+        id={key}
+        cardList={cardList}
+        setCardList={setCardList}
+      />
     );
-    setEdCardList({ edCardList: [...edCardList] });
+    setCardList(cardList.concat(edCard));
   };
 
   return (
-    <div id="ed-wrapper" className="form-wrapper">
+    <section id="ed-wrapper" className="form-wrapper">
       <h2>Education</h2>
-      {edCardList}
+      {cardList}
       <div className="button-container">
-        <button type="button" onClick={addEdCard}>
+        <button type="button" onClick={addCard}>
           Add Education
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
