@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
 
-function EdCard({ education, setEducation, id, setCardList }) {
+function EdCard({ education, setEducation, id, cardList, setCardList }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(value);
@@ -14,16 +14,15 @@ function EdCard({ education, setEducation, id, setCardList }) {
   };
 
   const deleteCard = (index) => {
-    console.log(index);
-    setCardList((current) => {
-      current.filter((card) => {
-        return card.id !== index;
-      });
-    });
+    const indexPosition = cardList.indexOf(index);
+    console.log(indexPosition);
+    const newList = [...cardList];
+    newList.splice(indexPosition, 1);
+    setCardList(newList);
   };
 
   return (
-    <div className="group">
+    <div className="group" id={id}>
       <TextInput
         values={education.degree}
         handleChange={handleChange}
@@ -60,11 +59,7 @@ function EdCard({ education, setEducation, id, setCardList }) {
         name="description"
         form="form"
       />
-      <button
-        type="button"
-        className="delete"
-        onClick={() => deleteCard({ id })}
-      >
+      <button type="button" className="delete" onClick={() => deleteCard(id)}>
         Delete
       </button>
     </div>
@@ -81,6 +76,11 @@ EdCard.propTypes = {
   }),
   setEducation: PropTypes.func,
   id: PropTypes.string,
+  cardList: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string,
+    }),
+  ),
   setCardList: PropTypes.func,
 };
 

@@ -7,24 +7,25 @@ function Education({ education, setEducation }) {
   const [cardList, setCardList] = useState([]);
 
   const addCard = () => {
-    const key = uuid();
-    const edCard = (
-      <EdCard
-        education={education}
-        setEducation={setEducation}
-        key={key}
-        id={key}
-        cardList={cardList}
-        setCardList={setCardList}
-      />
-    );
+    const edCard = {
+      key: uuid(),
+    };
     setCardList(cardList.concat(edCard));
   };
 
   return (
     <section id="ed-wrapper" className="form-wrapper">
       <h2>Education</h2>
-      {cardList}
+      {cardList.map((card) => (
+        <EdCard
+          key={card.key}
+          id={card.key}
+          education={education}
+          setEducation={setEducation}
+          cardList={cardList}
+          setCardList={setCardList}
+        />
+      ))}
       <div className="button-container">
         <button type="button" onClick={addCard}>
           Add Education
