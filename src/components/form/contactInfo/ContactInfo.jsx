@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { React } from "react";
+import PropTypes from "prop-types";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
 
@@ -92,5 +92,26 @@ function ContactInfo(props) {
     </div>
   );
 }
+
+ContactInfo.propTypes = {
+  personalDetails: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    email: PropTypes.string,
+    cell: PropTypes.string,
+    website: PropTypes.string,
+    linkedIn: PropTypes.string,
+    bio: PropTypes.string,
+    test: PropTypes.string,
+  }),
+  setPersonalDetails: PropTypes.func,
+  firstNameRef: PropTypes.elementType,
+  lastNameRef: PropTypes.elementType,
+  emailRef: PropTypes.elementType,
+  cellRef: PropTypes.elementType,
+  linkedInRef: PropTypes.elementType,
+  websiteRef: PropTypes.elementType,
+  bioRef: PropTypes.elementType,
+};
 
 export default ContactInfo;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import uuid from "react-uuid";
+import PropTypes from "prop-types";
 import EdCard from "./EdCard";
 
 function Education({ education, setEducation }) {
@@ -32,5 +33,16 @@ function Education({ education, setEducation }) {
     </section>
   );
 }
+
+Education.propTypes = {
+  education: PropTypes.shape({
+    degree: PropTypes.string,
+    school: PropTypes.string,
+    startDate: PropTypes.string,
+    endDate: PropTypes.string,
+    description: PropTypes.string,
+  }),
+  setEducation: PropTypes.func,
+};
 
 export default Education;
