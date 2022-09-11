@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import ContactInfo from "./contactInfo/ContactInfo";
 import "../../styles/Form.css";
 import Education from "./education/Education";
+import WorkExperience from "./work/WorkExperience";
 
 function Form({ personalDetails, setPersonalDetails }) {
   return (
@@ -12,8 +13,8 @@ function Form({ personalDetails, setPersonalDetails }) {
           personalDetails={personalDetails}
           setPersonalDetails={setPersonalDetails}
         />
-        {/* <WorkExperience /> */}
         <Education />
+        <WorkExperience />
       </form>
     </div>
   );

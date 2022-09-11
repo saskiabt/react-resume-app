@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
 
-function WorkCard({ deleteCard }) {
-  const initialValues = {
+function WorkCard({ i, deleteCard }) {
+  const initialWorkValues = {
     position: "",
     company: "",
     startDate: "",
@@ -12,49 +12,49 @@ function WorkCard({ deleteCard }) {
     description: "",
   };
 
-  const [values, setValues] = useState(initialValues);
+  const [work, setWork] = useState(initialWorkValues);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(value);
-    setValues({
-      ...values,
+    setWork({
+      ...work,
       [name]: value,
     });
   };
 
   return (
-    <div>
+    <div className="group" id={i} key={i}>
       <TextInput
-        values={values.position}
+        values={work.position}
         handleChange={handleChange}
         type="text"
         placeholder="Position name..."
         name="position"
       />
       <TextInput
-        values={values.company}
+        values={work.company}
         handleChange={handleChange}
         type="text"
         placeholder="Company name..."
         name="company"
       />
       <TextInput
-        values={values.startDate}
+        values={work.startDate}
         handleChange={handleChange}
         type="date"
         placeholder="Start Date:"
         name="startDate"
       />
       <TextInput
-        values={values.endDate}
+        values={work.endDate}
         handleChange={handleChange}
         type="date"
         placeholder="End Date:"
         name="endDate"
       />
       <TextArea
-        values={values.description}
+        values={work.description}
         handleChange={handleChange}
         type="text"
         placeholder="Description"

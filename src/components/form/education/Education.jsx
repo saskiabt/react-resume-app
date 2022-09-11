@@ -13,7 +13,7 @@ function Education() {
   };
 
   const deleteCard = (i) => {
-    let newList = [...cardList];
+    const newList = [...cardList];
     newList.splice(i, 1);
     console.log(newList);
     setCardList(newList);
@@ -26,11 +26,11 @@ function Education() {
         cardList.map((card, i) => {
           return (
             <EdCard
+              card={card}
               key={card.key}
-              id={i}
+              i={i}
               cardList={cardList}
               setCardList={setCardList}
-              card={card}
               deleteCard={deleteCard}
             />
           );

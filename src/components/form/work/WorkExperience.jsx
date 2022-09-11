@@ -1,35 +1,46 @@
 import React, { useState } from "react";
+import uuid from "react-uuid";
 import WorkCard from "./WorkCard";
 
 function WorkExperience() {
-  const deleteCard = (event) => {
-    const { target } = event;
-    const { key } = target;
-    setWorkCardList(workCardList.splice({ key }, 1));
+  const [workCardList, setWorkCardList] = useState([]);
+
+  const addCard = () => {
+    const card = {
+      key: uuid(),
+    };
+    setWorkCardList(workCardList.concat(card));
   };
 
-  const [workCardList, setWorkCardList] = useState([
-    <WorkCard key={0} deleteCard={deleteCard} />,
-  ]);
-
-  const addWorkCard = () => {
-    setWorkCardList(
-      workCardList.concat(
-        <WorkCard key={workCardList.length} deleteCard={deleteCard} />,
-      ),
-    );
+  const deleteCard = (i) => {
+    const newList = [...workCardList];
+    newList.splice(i, 1);
+    console.log(newList);
+    setWorkCardList(newList);
   };
 
   return (
-    <div id="work-experience-wrapper" className="form-wrapper">
+    <section id="work-wrapper" className="form-wrapper">
       <h2>Work Experience</h2>
-      {workCardList}
+      {workCardList &&
+        workCardList.map((card, i) => {
+          return (
+            <WorkCard
+              card={card}
+              key={card.key}
+              i={i}
+              workCardList={workCardList}
+              setWorkCardList={setWorkCardList}
+              deleteCard={deleteCard}
+            />
+          );
+        })}
       <div className="button-container">
-        <button type="button" onClick={addWorkCard}>
+        <button type="button" onClick={addCard}>
           Add Work Experience
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
