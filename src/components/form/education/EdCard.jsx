@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
 
-function EdCard({ education, setEducation, id, cardList, setCardList }) {
+function EdCard({ deleteCard, i }) {
+  const initialEDValues = {
+    degree: "",
+    school: "",
+    startDate: "",
+    endDate: "",
+    description: "",
+  };
+
+  const [education, setEducation] = useState(initialEDValues);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(value);
@@ -13,16 +23,8 @@ function EdCard({ education, setEducation, id, cardList, setCardList }) {
     });
   };
 
-  const deleteCard = (index) => {
-    const indexPosition = cardList.indexOf(index);
-    console.log(indexPosition);
-    const newList = [...cardList];
-    newList.splice(indexPosition, 1);
-    setCardList(newList);
-  };
-
   return (
-    <div className="group" id={id}>
+    <div className="group" id={i} key={i}>
       <TextInput
         values={education.degree}
         handleChange={handleChange}
@@ -59,7 +61,7 @@ function EdCard({ education, setEducation, id, cardList, setCardList }) {
         name="description"
         form="form"
       />
-      <button type="button" className="delete" onClick={() => deleteCard(id)}>
+      <button type="button" className="delete" onClick={() => deleteCard(i)}>
         Delete
       </button>
     </div>
@@ -74,14 +76,8 @@ EdCard.propTypes = {
     endDate: PropTypes.string,
     description: PropTypes.string,
   }),
-  setEducation: PropTypes.func,
-  id: PropTypes.string,
-  cardList: PropTypes.arrayOf(
-    PropTypes.shape({
-      key: PropTypes.string,
-    }),
-  ),
-  setCardList: PropTypes.func,
+  i: PropTypes.number,
+  deleteCard: PropTypes.func,
 };
 
 export default EdCard;

@@ -26,16 +26,6 @@ function App() {
 
   const [personalDetails, setPersonalDetails] = useState(initialPDValues);
 
-  const initialEDValues = {
-    degree: "",
-    school: "",
-    startDate: "",
-    endDate: "",
-    description: "",
-  };
-
-  const [education, setEducation] = useState(initialEDValues);
-
   return (
     <div className="App">
       <Form
@@ -48,8 +38,6 @@ function App() {
         bioRef={bioRef}
         personalDetails={personalDetails}
         setPersonalDetails={setPersonalDetails}
-        education={education}
-        setEducation={setEducation}
       />
       <Output
         firstNameRef={firstNameRef}

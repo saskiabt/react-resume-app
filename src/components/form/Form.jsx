@@ -4,12 +4,7 @@ import ContactInfo from "./contactInfo/ContactInfo";
 import "../../styles/Form.css";
 import Education from "./education/Education";
 
-function Form({
-  personalDetails,
-  setPersonalDetails,
-  education,
-  setEducation,
-}) {
+function Form({ personalDetails, setPersonalDetails }) {
   return (
     <div className="Form">
       <form id="form">
@@ -18,7 +13,7 @@ function Form({
           setPersonalDetails={setPersonalDetails}
         />
         {/* <WorkExperience /> */}
-        <Education education={education} setEducation={setEducation} />
+        <Education />
       </form>
     </div>
   );
@@ -43,7 +38,6 @@ Form.propTypes = {
     endDate: PropTypes.string,
     description: PropTypes.string,
   }),
-  setEducation: PropTypes.func,
 };
 
 export default Form;
