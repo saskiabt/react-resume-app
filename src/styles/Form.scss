@@ -6,3 +6,17 @@
   gap: 5%;
   width: 100%;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  width: 75%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}

@@ -77,6 +77,7 @@ function Education({ educationOutput, setEducationOutput }) {
           type="date"
           placeholder="Start Date:"
           name="startDate"
+          label="Start Date: "
         />
         <TextInput
           values={education.endDate}
@@ -84,6 +85,7 @@ function Education({ educationOutput, setEducationOutput }) {
           type="date"
           placeholder="End Date:"
           name="endDate"
+          label="End Date: "
         />
         <TextArea
           values={education.description}

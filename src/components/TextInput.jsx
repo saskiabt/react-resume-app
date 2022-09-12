@@ -2,9 +2,11 @@
 import React from "react";
 
 const TextInput = React.forwardRef((props, ref) => {
-  const { type, values, handleChange, placeholder, name } = props;
+  const { type, values, handleChange, placeholder, name, label } = props;
   return (
     <label htmlFor={name} className="input-box">
+      {" "}
+      {label}
       <input
         type={type}
         value={values[name]}

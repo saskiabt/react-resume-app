@@ -77,6 +77,7 @@ function WorkExperience({ workOutput, setWorkOutput }) {
           type="date"
           placeholder="Start Date:"
           name="startDate"
+          label="Start Date:"
         />
         <TextInput
           values={work.endDate}
@@ -84,6 +85,7 @@ function WorkExperience({ workOutput, setWorkOutput }) {
           type="date"
           placeholder="End Date:"
           name="endDate"
+          label="End Date: "
         />
         <TextArea
           values={work.description}
@@ -93,7 +95,9 @@ function WorkExperience({ workOutput, setWorkOutput }) {
           name="description"
           form="form"
         />
-        <button type="submit">Submit</button>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </section>
   );

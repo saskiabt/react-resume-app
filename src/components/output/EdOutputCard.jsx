@@ -11,8 +11,14 @@ function EdOutPutCard({ i, card, educationOutput, setEducationOutput }) {
     <div className="ed-output-card" key={i}>
       <h2>{card.degree}</h2>
       <h3>{card.school}</h3>
-      <p>{card.startDate}</p>
-      <p>{card.endDate}</p>
+      <h4>
+        Start Date
+        <p>{card.startDate}</p>
+      </h4>
+      <h4>
+        End Date
+        <p>{card.endDate}</p>
+      </h4>
       <p>{card.description}</p>
       <div>
         <button
