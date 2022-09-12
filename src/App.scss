@@ -21,6 +21,7 @@
 .Form,
 .Output {
   display: flex;
+  flex-direction: column;
   width: 40vw;
   height: fit-content;
   border: 0.5px solid black;

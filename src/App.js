@@ -26,6 +26,8 @@ function App() {
 
   const [personalDetails, setPersonalDetails] = useState(initialPDValues);
 
+  const [educationOutput, setEducationOutput] = useState([]);
+
   return (
     <div className="App">
       <Form
@@ -38,6 +40,8 @@ function App() {
         bioRef={bioRef}
         personalDetails={personalDetails}
         setPersonalDetails={setPersonalDetails}
+        educationOutput={educationOutput}
+        setEducationOutput={setEducationOutput}
       />
       <Output
         firstNameRef={firstNameRef}
@@ -47,6 +51,8 @@ function App() {
         linkedInRef={linkedInRef}
         websiteRef={websiteRef}
         bioRef={bioRef}
+        educationOutput={educationOutput}
+        setEducationOutput={setEducationOutput}
       />
     </div>
   );

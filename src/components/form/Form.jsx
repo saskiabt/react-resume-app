@@ -5,17 +5,23 @@ import "../../styles/Form.css";
 import Education from "./education/Education";
 import WorkExperience from "./work/WorkExperience";
 
-function Form({ personalDetails, setPersonalDetails }) {
+function Form({
+  personalDetails,
+  setPersonalDetails,
+  educationOutput,
+  setEducationOutput,
+}) {
   return (
     <div className="Form">
-      <form id="form">
-        <ContactInfo
-          personalDetails={personalDetails}
-          setPersonalDetails={setPersonalDetails}
-        />
-        <Education />
-        <WorkExperience />
-      </form>
+      <ContactInfo
+        personalDetails={personalDetails}
+        setPersonalDetails={setPersonalDetails}
+      />
+      <Education
+        educationOutput={educationOutput}
+        setEducationOutput={setEducationOutput}
+      />
+      <WorkExperience />
     </div>
   );
 }
@@ -39,6 +45,16 @@ Form.propTypes = {
     endDate: PropTypes.string,
     description: PropTypes.string,
   }),
+  educationOutput: PropTypes.arrayOf(
+    PropTypes.shape({
+      degree: PropTypes.string,
+      school: PropTypes.string,
+      startDate: PropTypes.number,
+      endDate: PropTypes.number,
+      description: PropTypes.string,
+    }),
+  ),
+  setEducationOutput: PropTypes.func,
 };
 
 export default Form;

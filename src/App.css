@@ -29,6 +29,7 @@
 .Form,
 .Output {
   display: flex;
+  flex-direction: column;
   width: 40vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
