@@ -1,3 +1,11 @@
+.Output {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.output-section {
+  padding-bottom: 10px;
+}
 .output-section h1 {
   color: blue;
 }
@@ -9,23 +17,27 @@
   grid-row-gap: 10px;
 }
 #info-output .name {
-  font-size: large;
-  padding-left: 5%;
+  font-size: larger;
   width: 100%;
   text-align: start;
   padding-right: 5%;
   grid-area: 1/1;
+  margin-top: 20px;
+}
+#info-output .name h1 {
+  margin: 0;
 }
 #info-output .details {
   width: 100%;
-  margin-top: 10px;
-  padding: 0rem 1rem;
-  border-left: 1px solid black;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   grid-column: 2/2;
   grid-row: 1/1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 #info-output .details p {
   margin: 0;
@@ -37,4 +49,14 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  padding: 0rem 0.5rem;
+  font-style: italic;
+}
+#info-output button {
+  border: none;
+  padding: 2px;
+  background-color: white;
+  color: blue;
+  -webkit-text-decoration: underline 0.3px solid blue;
+          text-decoration: underline 0.3px solid blue;
 }/*# sourceMappingURL=Output.css.map */

@@ -18,7 +18,7 @@ function App() {
     cell: "xxx-xxx-xxxx",
     website: "",
     linkedIn: "",
-    bio: "Test Bio",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi sit amet mauris. Pharetra et ultrices neque ornare aenean euismod elementum. Consectetur libero id faucibus nisl tincidunt eget nullam non.",
     test: "test",
   };
 

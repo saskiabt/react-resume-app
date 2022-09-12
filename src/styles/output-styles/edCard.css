@@ -1,0 +1,65 @@
+#ed-output,
+#work-output {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#ed-output h2,
+#work-output h2 {
+  margin: 0;
+}
+#ed-output .subheading,
+#work-output .subheading {
+  margin: 0.5rem 0rem;
+}
+
+.ed-output-card,
+.work-output-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: black;
+}
+.ed-output-card h3,
+.work-output-card h3 {
+  margin: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  margin-block: 0;
+  display: flex;
+}
+.ed-output-card h4,
+.work-output-card h4 {
+  margin: 0;
+  font-style: italic;
+}
+.ed-output-card h5,
+.work-output-card h5 {
+  margin: 0;
+}
+.ed-output-card p,
+.work-output-card p {
+  margin: 0;
+  font-size: small;
+}
+.ed-output-card .title-date,
+.work-output-card .title-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.ed-output-card .card-buttons,
+.work-output-card .card-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 5px;
+}
+
+.date-label {
+  color: rgba(0, 0, 0, 0.544);
+}/*# sourceMappingURL=edCard.css.map */

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../../styles/output-styles/edCard.css";
 
 function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
   const deleteCard = (index, cardList) => {
@@ -8,13 +9,18 @@ function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
     setWorkOutput(newList);
   };
   return (
-    <div className="ed-output-card" key={i}>
-      <h2>{card.position}</h2>
-      <h3>{card.company}</h3>
-      <p>{card.startDate}</p>
-      <p>{card.endDate}</p>
-      <p>{card.description}</p>
+    <div className="work-output-card" key={i}>
+      <div className="title-date">
+        <h3>{card.position}</h3>
+        <h5>
+          {card.startDate} – {card.endDate}
+        </h5>
+      </div>
       <div>
+        <h4>{card.company}</h4>
+      </div>
+      <p>{card.description}</p>
+      <div className="card-buttons">
         <button
           type="button"
           className="delete"

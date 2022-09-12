@@ -16,8 +16,8 @@ function Output({
   return (
     <div className="Output">
       <PersonalInfoOutput personalDetails={personalDetails} />
-      <div className="output-section" id="work-output">
-        <h2>Education</h2>
+      <div className="output-section" id="ed-output">
+        <h2 className="subheading">Education</h2>
         {educationOutput &&
           educationOutput.map((card, i) => {
             return (
@@ -32,7 +32,7 @@ function Output({
           })}
       </div>
       <div className="output-section" id="work-output">
-        <h2>Work Experience</h2>
+        <h2 className="subheading">Work Experience</h2>
         {workOutput &&
           workOutput.map((card, i) => {
             return (
