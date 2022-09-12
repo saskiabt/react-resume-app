@@ -28,52 +28,46 @@ function ContactInfo(props) {
     <section id="contact-info-wrapper" className="form-wrapper">
       <h2>Personal Info</h2>
       <form className="group">
-        <section className="names">
-          <TextInput
-            values={personalDetails.fullName}
-            handleChange={handleChange}
-            type="text"
-            placeholder="Full Name"
-            name="fullName"
-            ref={firstNameRef}
-          />
-        </section>
-        <section className="cell-email">
-          <TextInput
-            values={personalDetails.email}
-            handleChange={handleChange}
-            type="email"
-            placeholder="Email Address:"
-            name="email"
-            ref={emailRef}
-          />
-          <TextInput
-            values={personalDetails.cell}
-            handleChange={handleChange}
-            type="tel"
-            placeholder="Mobile Number:"
-            name="cell"
-            ref={cellRef}
-          />
-        </section>
-        <section className="linkedin-website">
-          <TextInput
-            values={personalDetails.linkedIn}
-            handleChange={handleChange}
-            type="url"
-            placeholder="LinkedIn Profile:"
-            name="linkedIn"
-            ref={linkedInRef}
-          />
-          <TextInput
-            values={personalDetails.website}
-            handleChange={handleChange}
-            type="url"
-            placeholder="Website:"
-            name="website"
-            ref={websiteRef}
-          />
-        </section>
+        <TextInput
+          values={personalDetails.fullName}
+          handleChange={handleChange}
+          type="text"
+          placeholder="Full Name"
+          name="fullName"
+          ref={firstNameRef}
+        />
+        <TextInput
+          values={personalDetails.email}
+          handleChange={handleChange}
+          type="email"
+          placeholder="Email Address:"
+          name="email"
+          ref={emailRef}
+        />
+        <TextInput
+          values={personalDetails.cell}
+          handleChange={handleChange}
+          type="tel"
+          placeholder="Mobile Number:"
+          name="cell"
+          ref={cellRef}
+        />
+        <TextInput
+          values={personalDetails.linkedIn}
+          handleChange={handleChange}
+          type="url"
+          placeholder="LinkedIn Profile:"
+          name="linkedIn"
+          ref={linkedInRef}
+        />
+        <TextInput
+          values={personalDetails.website}
+          handleChange={handleChange}
+          type="url"
+          placeholder="Website:"
+          name="website"
+          ref={websiteRef}
+        />
         <TextArea
           values={personalDetails.bio}
           handleChange={handleChange}

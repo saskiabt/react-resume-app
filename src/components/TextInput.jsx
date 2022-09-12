@@ -6,7 +6,7 @@ const TextInput = React.forwardRef((props, ref) => {
   return (
     <label htmlFor={name} className="input-box">
       {" "}
-      {label}
+      {label && <div className="date-label">{label}</div>}
       <input
         type={type}
         value={values[name]}

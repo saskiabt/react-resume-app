@@ -1,8 +1,10 @@
 import React from "react";
 import uuid from "react-uuid";
 import PropTypes from "prop-types";
+import "../../styles/output-styles/Output.css";
 import EdOutPutCard from "./EdOutputCard";
 import WorkOutputCard from "./WorkOutputCard";
+import PersonalInfoOutput from "./PersonalInfoOutput";
 
 function Output({
   educationOutput,
@@ -13,25 +15,7 @@ function Output({
 }) {
   return (
     <div className="Output">
-      <div className="output-section" id="info-output" />
-      <h1>{personalDetails.fullName}</h1>
-      <div>
-        <p>{personalDetails.email}</p>
-        <p>{personalDetails.cell}</p>
-      </div>
-      <div>
-        {personalDetails.linkedIn && (
-          <p>
-            <a href={personalDetails.linkedIn}>LinkedIn</a>
-          </p>
-        )}
-        {personalDetails.website && (
-          <p>
-            <a href={personalDetails.website}>Website</a>
-          </p>
-        )}
-      </div>
-      <p>{personalDetails.bio}</p>
+      <PersonalInfoOutput personalDetails={personalDetails} />
       <div className="output-section" id="work-output">
         <h2>Education</h2>
         {educationOutput &&
