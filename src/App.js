@@ -13,12 +13,12 @@ function App() {
   const bioRef = useRef(null);
 
   const initialPDValues = {
-    fullName: "",
-    email: "",
-    cell: "",
+    fullName: "XXXX XXXXX",
+    email: "xxxxx@xxx.com",
+    cell: "xxx-xxx-xxxx",
     website: "",
     linkedIn: "",
-    bio: "",
+    bio: "Test Bio",
     test: "test",
   };
 

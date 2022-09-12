@@ -29,8 +29,8 @@ function PersonalInfoOutput({ personalDetails }) {
             Website
           </button>
         )}
-        <p>{personalDetails.bio}</p>
       </div>
+      <div className="bio-output">{personalDetails.bio}</div>
     </div>
   );
 }
