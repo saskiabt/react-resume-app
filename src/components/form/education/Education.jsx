@@ -55,7 +55,12 @@ function Education({ educationOutput, setEducationOutput }) {
 
   return (
     <section id="ed-wrapper" className="form-wrapper">
-      <h2>Education</h2>
+      <div className="form-header-container">
+        <button type="button" onClick={toggleFormVisibility}>
+          X
+        </button>
+        <h2>Education</h2>
+      </div>
       <form className="group" onSubmit={submitCard}>
         <TextInput
           values={education.degree}
@@ -74,18 +79,16 @@ function Education({ educationOutput, setEducationOutput }) {
         <TextInput
           values={education.startDate}
           handleChange={handleChange}
-          type="date"
-          placeholder="Start Date:"
+          type="string"
+          placeholder="Start Date: MM/YYYY"
           name="startDate"
-          label="Start Date: "
         />
         <TextInput
           values={education.endDate}
           handleChange={handleChange}
-          type="date"
-          placeholder="End Date:"
+          type="string"
+          placeholder="End Date: MM/YYYY"
           name="endDate"
-          label="End Date: "
         />
         <TextArea
           values={education.description}
@@ -95,7 +98,7 @@ function Education({ educationOutput, setEducationOutput }) {
           name="description"
           form="form"
         />
-        <div>
+        <div className="form-button-container">
           <button type="submit">Submit</button>
         </div>
       </form>

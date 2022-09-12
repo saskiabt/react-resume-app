@@ -1,5 +1,22 @@
+@font-face {
+  font-family: "director-light";
+  src: url(/Users/saskiabinder/repos/resume-builder/src/fonts/degheest-types-master/fonts/webfonts/Director-Light.woff2), url(/Users/saskiabinder/repos/resume-builder/src/fonts/degheest-types-master/fonts/webfonts/Director-Light.woff), url(/Users/saskiabinder/repos/resume-builder/src/fonts/degheest-types-master/fonts/ttf/Director-Light.ttf);
+}
+@font-face {
+  font-family: "director-regular";
+  src: url(/Users/saskiabinder/repos/resume-builder/src/fonts/degheest-types-master/fonts/webfonts/Director-Regular.woff2), url(/Users/saskiabinder/repos/resume-builder/src/fonts/degheest-types-master/fonts/webfonts/Director-Regular.woff), url(/Users/saskiabinder/repos/resume-builder/src/fonts/degheest-types-master/fonts/ttf/Director-Regular.ttf);
+}
+@font-face {
+  font-family: "etroit";
+  src: url(/Users/saskiabinder/repos/resume-builder/src/fonts/Solide-Mirage-master/fonts/webfonts/Etroit/Solide_Mirage-Etroit_web.woff2), url(/Users/saskiabinder/repos/resume-builder/src/fonts/Solide-Mirage-master/fonts/webfonts/Etroit/Solide_Mirage-Etroit_web.woff), url(/Users/saskiabinder/repos/resume-builder/src/fonts/Solide-Mirage-master/fonts/webfonts/Etroit/Solide_Mirage-Etroit_web.ttf);
+}
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #c4e535;
 }
 
 .App {
@@ -37,4 +54,15 @@
   height: fit-content;
   border: 0.5px solid black;
   margin-bottom: 100px;
+}
+
+.app-title {
+  font-family: "Etroit";
+  font-size: 5rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }/*# sourceMappingURL=App.css.map */

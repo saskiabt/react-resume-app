@@ -1,35 +1,36 @@
 .Output {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 4%;
+  padding-right: 3%;
+  background-color: white;
 }
 
 .output-section {
   padding-bottom: 10px;
 }
 .output-section h1 {
-  color: blue;
+  color: black;
 }
 
 #info-output {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 0px;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 20px;
   grid-row-gap: 10px;
+  margin-top: 20px;
 }
 #info-output .name {
-  font-size: larger;
+  font-size: 1.5rem;
   width: 100%;
   text-align: start;
   padding-right: 5%;
   grid-area: 1/1;
-  margin-top: 20px;
+  font-family: "etroit";
 }
 #info-output .name h1 {
   margin: 0;
 }
 #info-output .details {
   width: 100%;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

@@ -13,7 +13,7 @@ function App() {
   const bioRef = useRef(null);
 
   const initialPDValues = {
-    fullName: "XXXX XXXXX",
+    fullName: "Saskia Binder",
     email: "xxxxx@xxx.com",
     cell: "xxx-xxx-xxxx",
     website: "",
@@ -24,8 +24,26 @@ function App() {
 
   const [personalDetails, setPersonalDetails] = useState(initialPDValues);
 
-  const [educationOutput, setEducationOutput] = useState([]);
-  const [workOutput, setWorkOutput] = useState([]);
+  const [educationOutput, setEducationOutput] = useState([
+    {
+      degree: "B.A. , Government ",
+      school: "University of Texas",
+      startDate: "09/2014",
+      endDate: "06/2020",
+      description: "Minor: Business Administration",
+      isShowing: false,
+    },
+  ]);
+  const [workOutput, setWorkOutput] = useState([
+    {
+      position: "Web Developer",
+      company: "",
+      startDate: "12/2021",
+      endDate: "Present",
+      description: "React & Javascript Developer",
+      isShowing: false,
+    },
+  ]);
 
   return (
     <div className="App">

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../../styles/output-styles/edCard.css";
+import "../../styles/output-styles/Card.css";
 
 function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
   const deleteCard = (index, cardList) => {
@@ -12,7 +12,7 @@ function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
     <div className="work-output-card" key={i}>
       <div className="title-date">
         <h3>{card.position}</h3>
-        <h5>
+        <h5 className="date">
           {card.startDate} – {card.endDate}
         </h5>
       </div>

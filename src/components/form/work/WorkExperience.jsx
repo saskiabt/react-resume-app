@@ -55,7 +55,12 @@ function WorkExperience({ workOutput, setWorkOutput }) {
 
   return (
     <section id="work-wrapper" className="form-wrapper">
-      <h2>Work Experience</h2>
+      <div className="form-header-container">
+        <button type="button" onClick={toggleFormVisibility}>
+          X
+        </button>
+        <h2>Work Experience</h2>
+      </div>
       <form className="group" onSubmit={submitCard}>
         <TextInput
           values={work.position}
@@ -74,18 +79,17 @@ function WorkExperience({ workOutput, setWorkOutput }) {
         <TextInput
           values={work.startDate}
           handleChange={handleChange}
-          type="date"
-          placeholder="Start Date:"
+          type="string"
+          placeholder="Start Date: MM/YYYY"
           name="startDate"
           label="Start Date:"
         />
         <TextInput
           values={work.endDate}
           handleChange={handleChange}
-          type="date"
-          placeholder="End Date:"
+          type="string"
+          placeholder="End Date: MM/YYYY"
           name="endDate"
-          label="End Date: "
         />
         <TextArea
           values={work.description}
@@ -95,7 +99,7 @@ function WorkExperience({ workOutput, setWorkOutput }) {
           name="description"
           form="form"
         />
-        <div>
+        <div className="form-button-container">
           <button type="submit">Submit</button>
         </div>
       </form>
