@@ -49,8 +49,8 @@ Form.propTypes = {
     PropTypes.shape({
       degree: PropTypes.string,
       school: PropTypes.string,
-      startDate: PropTypes.number,
-      endDate: PropTypes.number,
+      startDate: PropTypes.string,
+      endDate: PropTypes.string,
       description: PropTypes.string,
     }),
   ),
