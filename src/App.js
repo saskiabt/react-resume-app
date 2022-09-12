@@ -27,6 +27,7 @@ function App() {
   const [personalDetails, setPersonalDetails] = useState(initialPDValues);
 
   const [educationOutput, setEducationOutput] = useState([]);
+  const [workOutput, setWorkOutput] = useState([]);
 
   return (
     <div className="App">
@@ -42,6 +43,8 @@ function App() {
         setPersonalDetails={setPersonalDetails}
         educationOutput={educationOutput}
         setEducationOutput={setEducationOutput}
+        workOutput={workOutput}
+        setWorkOutput={setWorkOutput}
       />
       <Output
         firstNameRef={firstNameRef}
@@ -53,6 +56,8 @@ function App() {
         bioRef={bioRef}
         educationOutput={educationOutput}
         setEducationOutput={setEducationOutput}
+        workOutput={workOutput}
+        setWorkOutput={setWorkOutput}
       />
     </div>
   );

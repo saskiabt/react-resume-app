@@ -10,6 +10,8 @@ function Form({
   setPersonalDetails,
   educationOutput,
   setEducationOutput,
+  workOutput,
+  setWorkOutput,
 }) {
   return (
     <div className="Form">
@@ -21,7 +23,7 @@ function Form({
         educationOutput={educationOutput}
         setEducationOutput={setEducationOutput}
       />
-      <WorkExperience />
+      <WorkExperience workOutput={workOutput} setWorkOutput={setWorkOutput} />
     </div>
   );
 }
@@ -55,6 +57,17 @@ Form.propTypes = {
     }),
   ),
   setEducationOutput: PropTypes.func,
+  workOutput: PropTypes.arrayOf(
+    PropTypes.shape({
+      position: PropTypes.string,
+      company: PropTypes.string,
+      startDate: PropTypes.string,
+      endDate: PropTypes.string,
+      description: PropTypes.string,
+      isShowing: PropTypes.bool,
+    }),
+  ),
+  setWorkOutput: PropTypes.func,
 };
 
 export default Form;
