@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 
 const TextInput = React.forwardRef((props, ref) => {
   const { type, values, handleChange, placeholder, name, label } = props;
@@ -20,4 +20,14 @@ const TextInput = React.forwardRef((props, ref) => {
   );
 });
 
+TextInput.propTypes = {
+  type: PropTypes.string,
+  values: PropTypes.string,
+  handleChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  name: PropTypes.string,
+  label: PropTypes.string,
+};
+
+TextInput.displayName = "TextInput";
 export default TextInput;

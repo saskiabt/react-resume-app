@@ -5,8 +5,7 @@ import Form from "./components/form/Form";
 import Output from "./components/output/Output";
 
 function App() {
-  const firstNameRef = useRef(null);
-  const lastNameRef = useRef(null);
+  const fullNameRef = useRef(null);
   const emailRef = useRef(null);
   const cellRef = useRef(null);
   const linkedInRef = useRef(null);
@@ -14,8 +13,7 @@ function App() {
   const bioRef = useRef(null);
 
   const initialPDValues = {
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     cell: "",
     website: "",
@@ -32,8 +30,7 @@ function App() {
   return (
     <div className="App">
       <Form
-        firstNameRef={firstNameRef}
-        lastNameRef={lastNameRef}
+        fullNameRef={fullNameRef}
         emailRef={emailRef}
         cellRef={cellRef}
         linkedInRef={linkedInRef}
@@ -47,13 +44,14 @@ function App() {
         setWorkOutput={setWorkOutput}
       />
       <Output
-        firstNameRef={firstNameRef}
-        lastNameRef={lastNameRef}
+        fullNameRef={fullNameRef}
         emailRef={emailRef}
         cellRef={cellRef}
         linkedInRef={linkedInRef}
         websiteRef={websiteRef}
         bioRef={bioRef}
+        personalDetails={personalDetails}
+        setPersonalDetails={setPersonalDetails}
         educationOutput={educationOutput}
         setEducationOutput={setEducationOutput}
         workOutput={workOutput}

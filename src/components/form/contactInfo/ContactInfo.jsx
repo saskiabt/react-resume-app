@@ -6,7 +6,6 @@ import TextInput from "../../TextInput";
 function ContactInfo(props) {
   const {
     firstNameRef,
-    lastNameRef,
     emailRef,
     cellRef,
     linkedInRef,
@@ -31,20 +30,12 @@ function ContactInfo(props) {
       <form className="group">
         <section className="names">
           <TextInput
-            values={personalDetails.firstName}
+            values={personalDetails.fullName}
             handleChange={handleChange}
             type="text"
-            placeholder="First Name"
-            name="firstName"
+            placeholder="Full Name"
+            name="fullName"
             ref={firstNameRef}
-          />
-          <TextInput
-            values={personalDetails.lastName}
-            handleChange={handleChange}
-            type="text"
-            placeholder="Last Name:"
-            name="lastName"
-            ref={lastNameRef}
           />
         </section>
         <section className="cell-email">
@@ -97,8 +88,7 @@ function ContactInfo(props) {
 
 ContactInfo.propTypes = {
   personalDetails: PropTypes.shape({
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
+    fullName: PropTypes.string,
     email: PropTypes.string,
     cell: PropTypes.string,
     website: PropTypes.string,
@@ -108,7 +98,6 @@ ContactInfo.propTypes = {
   }),
   setPersonalDetails: PropTypes.func,
   firstNameRef: PropTypes.elementType,
-  lastNameRef: PropTypes.elementType,
   emailRef: PropTypes.elementType,
   cellRef: PropTypes.elementType,
   linkedInRef: PropTypes.elementType,

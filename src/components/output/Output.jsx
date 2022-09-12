@@ -9,11 +9,31 @@ function Output({
   setEducationOutput,
   workOutput,
   setWorkOutput,
+  personalDetails,
 }) {
   return (
     <div className="Output">
-      This is the Output Div
-      <div className="education-output">
+      <div className="output-section" id="info-output" />
+      <h1>{personalDetails.fullName}</h1>
+      <div>
+        <p>{personalDetails.email}</p>
+        <p>{personalDetails.cell}</p>
+      </div>
+      <div>
+        {personalDetails.linkedIn && (
+          <p>
+            <a href={personalDetails.linkedIn}>LinkedIn</a>
+          </p>
+        )}
+        {personalDetails.website && (
+          <p>
+            <a href={personalDetails.website}>Website</a>
+          </p>
+        )}
+      </div>
+      <p>{personalDetails.bio}</p>
+      <div className="output-section" id="work-output">
+        <h2>Education</h2>
         {educationOutput &&
           educationOutput.map((card, i) => {
             return (
@@ -27,7 +47,8 @@ function Output({
             );
           })}
       </div>
-      <div className="work-output">
+      <div className="output-section" id="work-output">
+        <h2>Work Experience</h2>
         {workOutput &&
           workOutput.map((card, i) => {
             return (
@@ -67,6 +88,15 @@ Output.propTypes = {
     }),
   ),
   setWorkOutput: PropTypes.func,
+  personalDetails: PropTypes.shape({
+    fullName: PropTypes.string,
+    email: PropTypes.string,
+    cell: PropTypes.string,
+    website: PropTypes.string,
+    linkedIn: PropTypes.string,
+    bio: PropTypes.string,
+    test: PropTypes.string,
+  }),
 };
 
 export default Output;
