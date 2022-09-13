@@ -142,4 +142,13 @@ textarea {
 .form-header-container button {
   position: absolute;
   left: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .submit-button {
+    border: 0.8px solid black;
+  }
+  .submit-button :active {
+    border: 1px double black;
+  }
 }/*# sourceMappingURL=Form.css.map */

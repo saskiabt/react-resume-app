@@ -131,3 +131,13 @@ textarea {
     left: 100%;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .submit-button {
+    border: 0.8px solid black;
+
+    :active {
+      border: 1px double black;
+    }
+  }
+}
