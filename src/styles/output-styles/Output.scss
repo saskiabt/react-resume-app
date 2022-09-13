@@ -2,6 +2,10 @@
   padding-left: 4%;
   padding-right: 3%;
   background-color: white;
+
+  input[type="text"] {
+    padding: 2px 5px;
+  }
 }
 
 .output-section {
@@ -62,6 +66,12 @@
     color: blue;
     text-decoration: underline 0.3px solid blue;
   }
+}
+
+#ed-output > form > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 450px) {

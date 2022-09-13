@@ -106,7 +106,9 @@ function EdOutPutCard({ i, card, educationOutput, setEducationOutput }) {
         form="form"
       />
       <div className="form-button-container">
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-edit">
+          Submit
+        </button>
       </div>
     </form>
   );

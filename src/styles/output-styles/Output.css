@@ -3,6 +3,9 @@
   padding-right: 3%;
   background-color: white;
 }
+.Output input[type=text] {
+  padding: 2px 5px;
+}
 
 .output-section {
   padding-bottom: 10px;
@@ -60,6 +63,12 @@
   color: blue;
   -webkit-text-decoration: underline 0.3px solid blue;
           text-decoration: underline 0.3px solid blue;
+}
+
+#ed-output > form > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 450px) {
