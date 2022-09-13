@@ -70,7 +70,7 @@ function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
   }
 
   return (
-    <form className="group" onSubmit={submitCard}>
+    <form className="output-form" onSubmit={submitCard}>
       <TextInput
         values={cardState.position}
         handleChange={handleChange}
@@ -91,7 +91,6 @@ function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
         type="string"
         placeholder="Start Date: MM/YYYY"
         name="startDate"
-        label="Start Date:"
       />
       <TextInput
         values={cardState.endDate}
@@ -108,8 +107,10 @@ function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
         name="description"
         form="form"
       />
-      <div className="form-button-container">
-        <button type="submit">Submit</button>
+      <div className="output-form-submit-container">
+        <button type="submit" className="output-submit">
+          Submit
+        </button>
       </div>
     </form>
   );

@@ -68,7 +68,7 @@ function EdOutPutCard({ i, card, educationOutput, setEducationOutput }) {
     );
   }
   return (
-    <form className="group" onSubmit={submitCard}>
+    <form className="output-form" onSubmit={submitCard}>
       <TextInput
         values={cardState.degree}
         handleChange={handleChange}
@@ -105,8 +105,8 @@ function EdOutPutCard({ i, card, educationOutput, setEducationOutput }) {
         name="description"
         form="form"
       />
-      <div className="form-button-container">
-        <button type="submit" className="submit-edit">
+      <div className="output-form-submit-container">
+        <button type="submit" className="output-submit">
           Submit
         </button>
       </div>
