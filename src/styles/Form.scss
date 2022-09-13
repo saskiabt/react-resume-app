@@ -16,16 +16,20 @@ $salmon: #fe88889c;
     border-radius: 10px;
     background-color: white;
     transition: ease-in 0.2s;
-    border-width: 0.8px;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
+    border-width: 1px;
+    // border-left: 0;
+    // border-right: 0;
+    // border-bottom: 0;
     font-family: monospace;
     font-weight: 400;
-    font-size: x-large;
+    font-family: "balto", sans-serif;
+    background-color: white;
+    font-size: large;
 
     &:hover {
-      background-color: $salmon;
+      border-width: 5px;
+      border-color: #98a6ff;
+      border-style: double;
     }
   }
 }
@@ -103,14 +107,18 @@ textarea {
     font-size: 16px;
     margin: 4px 2px;
     opacity: 100%;
-    transition: 0.3s;
+    transition: ease-in-out 0.2s;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
 
     &:hover {
-      opacity: 0.6;
+      // transform: scale(1.1);
+      // background-color: lightyellow;
+      border-width: 5px;
+      border-color: #98a6ff;
+      border-style: double;
     }
   }
 }
