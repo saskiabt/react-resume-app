@@ -25,10 +25,10 @@
     padding-right: 5%;
     grid-area: 1 / 1;
     font-family: "etroit";
+  }
 
-    h1 {
-      margin: 0;
-    }
+  h1 {
+    margin: 0;
   }
 
   .details {
@@ -61,5 +61,18 @@
     background-color: white;
     color: blue;
     text-decoration: underline 0.3px solid blue;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .name > h1 {
+    font-size: 1.6em;
+  }
+
+  .details > p {
+    font-size: 0.8em;
+  }
+  #info-output > div.bio-output {
+    font-size: 0.9em;
   }
 }

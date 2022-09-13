@@ -73,4 +73,14 @@ body {
   flex-direction: row;
   justify-content: center;
   color: black;
+
+  @media screen and (max-width: 450px) {
+    font-size: 4rem;
+  }
 }
+
+// @media screen and (max-width: 450px) {
+//   .app-title {
+//     font-size: 4rem;
+//   }
+// }

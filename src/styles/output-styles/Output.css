@@ -26,7 +26,7 @@
   grid-area: 1/1;
   font-family: "etroit";
 }
-#info-output .name h1 {
+#info-output h1 {
   margin: 0;
 }
 #info-output .details {
@@ -60,4 +60,16 @@
   color: blue;
   -webkit-text-decoration: underline 0.3px solid blue;
           text-decoration: underline 0.3px solid blue;
+}
+
+@media screen and (max-width: 450px) {
+  .name > h1 {
+    font-size: 1.6em;
+  }
+  .details > p {
+    font-size: 0.8em;
+  }
+  #info-output > div.bio-output {
+    font-size: 0.9em;
+  }
 }/*# sourceMappingURL=Output.css.map */
