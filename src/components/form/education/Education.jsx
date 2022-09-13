@@ -43,9 +43,13 @@ function Education({ educationOutput, setEducationOutput }) {
   if (!education.isShowing) {
     return (
       <section id="ed-wrapper" className="form-wrapper">
-        <h2>Education</h2>
+        {/* <h2>Education</h2> */}
         <div className="button-container">
-          <button type="button" onClick={toggleFormVisibility}>
+          <button
+            type="button"
+            onClick={toggleFormVisibility}
+            className="submit-button"
+          >
             Add Education
           </button>
         </div>

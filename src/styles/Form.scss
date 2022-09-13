@@ -1,3 +1,4 @@
+$salmon: #fe88889c;
 .Form {
   background-color: white;
   color: black;
@@ -6,12 +7,31 @@
     font-family: monospace;
     font-weight: 400;
   }
+  border-radius: 5%;
+
+  .submit-button {
+    padding: 10px 10px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: white;
+    transition: ease-in 0.2s;
+    border-width: 0.8px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: large;
+
+    &:hover {
+      background-color: $salmon;
+    }
+  }
 }
 
 .form-wrapper {
   display: flex;
   flex-direction: column;
-  border-bottom: 0.3px solid green;
   padding-bottom: 20px;
   gap: 5%;
   width: 100%;
@@ -23,12 +43,32 @@ form {
   gap: 0.3rem;
 }
 
-input {
+input,
+textarea {
   width: 90%;
   padding: 10px 5px;
   border-radius: 5px;
   border: 0.5px solid grey;
-  font-size: small;
+  font-size: medium;
+  font-family: balto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+input:-internal-autofill-selected {
+  background-color: none;
+}
+
+textarea::placeholder {
+  font-family: balto, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-style: italic;
 }
 
 .group {
@@ -39,7 +79,7 @@ input {
 textarea {
   resize: none;
   width: 90%;
-  padding-top: 2px;
+  padding-top: 10px;
   padding-left: 5px;
   padding-bottom: 10px;
   font-family: "Courier New", Courier, monospace;
@@ -57,19 +97,26 @@ textarea {
   justify-content: space-around;
 
   button {
-    padding: 1vmin 4vmin;
+    // padding: 1vmin 4vmin;
+    background-color: white;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    padding: 0.7em 1.7em;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 100%;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
-
-// .hide-button-container {
-//   display: flex;
-//   width: 100%;
-//   justify-content: flex-end;
-
-//   button {
-//     padding: 10px;
-//   }
-// }
 
 .form-header-container {
   display: flex;

@@ -43,9 +43,13 @@ function WorkExperience({ workOutput, setWorkOutput }) {
   if (!work.isShowing) {
     return (
       <section id="ed-wrapper" className="form-wrapper">
-        <h2>Work Experience</h2>
+        {/* <h2>Work Experience</h2> */}
         <div className="button-container">
-          <button type="button" onClick={toggleFormVisibility}>
+          <button
+            type="button"
+            onClick={toggleFormVisibility}
+            className="submit-button"
+          >
             Add Work
           </button>
         </div>

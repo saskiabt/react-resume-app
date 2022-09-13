@@ -16,7 +16,10 @@
 
 body {
   margin: 0;
-  background-color: #c4e535;
+  background-color: rgba(222, 255, 23, 0.93);
+  font-family: balto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .App {
@@ -48,7 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  width: 60vw;
+  width: 85vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -65,4 +68,5 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: black;
 }/*# sourceMappingURL=App.css.map */
