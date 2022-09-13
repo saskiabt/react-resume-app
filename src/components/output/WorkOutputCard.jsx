@@ -14,14 +14,14 @@ function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
     description: "",
   });
 
+  const editCard = () => {
+    setIsEditing(true);
+  };
+
   const deleteCard = (index, cardList) => {
     const newList = [...cardList];
     newList.splice(index, 1);
     setWorkOutput(newList);
-  };
-
-  const editCard = () => {
-    setIsEditing(true);
   };
 
   const handleChange = (event) => {
