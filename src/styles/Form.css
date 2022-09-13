@@ -24,7 +24,7 @@
 }
 .Form .submit-button:hover {
   border-width: 5px;
-  border-color: #98a6ff;
+  border-color: #060d37;
   border-style: double;
 }
 
@@ -130,7 +130,7 @@ textarea {
 }
 .form-button-container button:hover {
   border-width: 5px;
-  border-color: #98a6ff;
+  border-color: #060d37;
   border-style: double;
 }
 
