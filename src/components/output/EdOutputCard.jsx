@@ -29,9 +29,9 @@ function EdOutPutCard({ i, card, educationOutput, setEducationOutput }) {
         >
           Delete
         </button>
-        <button type="button" className="edit">
+        {/* <button type="button" className="edit">
           Edit
-        </button>
+        </button> */}
       </div>
     </div>
   );

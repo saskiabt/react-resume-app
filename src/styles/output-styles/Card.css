@@ -69,6 +69,11 @@
 .work-output-card .date {
   font-weight: 200;
 }
+.ed-output-card .delete,
+.work-output-card .delete {
+  font-family: "balto", sans-serif;
+  background-color: white;
+}
 
 .date-label {
   color: rgba(0, 0, 0, 0.544);

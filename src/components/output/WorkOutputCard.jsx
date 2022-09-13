@@ -28,9 +28,9 @@ function WorkOutputCard({ i, card, workOutput, setWorkOutput }) {
         >
           Delete
         </button>
-        <button type="button" className="edit">
+        {/* <button type="button" className="edit">
           Edit
-        </button>
+        </button> */}
       </div>
     </div>
   );

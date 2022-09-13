@@ -7,6 +7,7 @@
   color: black;
   font-family: monospace;
   font-weight: 400;
+  font-size: x-large;
 }
 .Form .submit-button {
   padding: 10px 10px;
@@ -19,8 +20,8 @@
   border-right: 0;
   border-bottom: 0;
   font-family: monospace;
-  font-weight: 700;
-  font-size: large;
+  font-weight: 400;
+  font-size: x-large;
 }
 .Form .submit-button:hover {
   background-color: rgba(254, 136, 136, 0.6117647059);
@@ -63,10 +64,6 @@ input:-ms-input-placeholder {
 
 input::placeholder {
   font-style: italic;
-}
-
-input:-internal-autofill-selected {
-  background-color: none;
 }
 
 textarea::-moz-placeholder {
