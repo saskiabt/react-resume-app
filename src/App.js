@@ -28,8 +28,8 @@ function App() {
     {
       degree: "B.A. , Government ",
       school: "University of Texas",
-      startDate: "09/2014",
-      endDate: "06/2020",
+      startDate: "",
+      endDate: "2020",
       description: "Minor: Business Administration",
       isShowing: false,
     },
