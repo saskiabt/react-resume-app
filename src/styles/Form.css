@@ -147,8 +147,10 @@ textarea {
 @media screen and (max-width: 450px) {
   .submit-button {
     border: 0.8px solid black;
+    color: black;
   }
   .submit-button :active {
     border: 1px double black;
+    color: black;
   }
 }/*# sourceMappingURL=Form.css.map */
