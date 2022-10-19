@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import TextArea from "../../TextArea";
 import TextInput from "../../TextInput";
+// import { autoEdValues } from "../../autofill";
 
 function Education({ educationOutput, setEducationOutput }) {
   const initialEDValues = {
@@ -64,6 +65,11 @@ function Education({ educationOutput, setEducationOutput }) {
           X
         </button>
         <h2>Education</h2>
+        <div>
+          <button type="button" className="autofill">
+            AutoFill
+          </button>
+        </div>
       </div>
       <form className="group" onSubmit={submitCard}>
         <TextInput
