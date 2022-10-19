@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-resume-app/static/css/main.eb8365a4.css",
-    "main.js": "/react-resume-app/static/js/main.a3c942e1.js",
+    "main.css": "/react-resume-app/static/css/main.b5702f34.css",
+    "main.js": "/react-resume-app/static/js/main.f699c173.js",
     "static/js/787.61b62c3a.chunk.js": "/react-resume-app/static/js/787.61b62c3a.chunk.js",
     "static/media/Director-Regular.ttf": "/react-resume-app/static/media/Director-Regular.00ec2d72121b8d064524.ttf",
     "static/media/Director-Light.ttf": "/react-resume-app/static/media/Director-Light.9badade39bb332b07bee.ttf",
@@ -13,12 +13,12 @@
     "static/media/Director-Regular.woff2": "/react-resume-app/static/media/Director-Regular.65a94e1f7f7dcec94d02.woff2",
     "static/media/Director-Light.woff2": "/react-resume-app/static/media/Director-Light.f0d8aad1d413ef685b60.woff2",
     "index.html": "/react-resume-app/index.html",
-    "main.eb8365a4.css.map": "/react-resume-app/static/css/main.eb8365a4.css.map",
-    "main.a3c942e1.js.map": "/react-resume-app/static/js/main.a3c942e1.js.map",
+    "main.b5702f34.css.map": "/react-resume-app/static/css/main.b5702f34.css.map",
+    "main.f699c173.js.map": "/react-resume-app/static/js/main.f699c173.js.map",
     "787.61b62c3a.chunk.js.map": "/react-resume-app/static/js/787.61b62c3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb8365a4.css",
-    "static/js/main.a3c942e1.js"
+    "static/css/main.b5702f34.css",
+    "static/js/main.f699c173.js"
   ]
 }
